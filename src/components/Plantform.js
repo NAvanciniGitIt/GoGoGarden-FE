@@ -23,10 +23,8 @@ export class Form extends Component {
   }
 
   handleSubmit = e => {
-    e.preventDefault();
-
+    e.preventDefault()
     this.props.addPlant(this.state, this.props.history);
-
   }
 
   render() {
@@ -34,7 +32,7 @@ export class Form extends Component {
     return (
       <div>
         <h3> Add Plant To Your Garden </h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="plant_type">Plant Category: </label>
             <input type="text" id="plant_type" name="plant_type" value={ this.state.plant_type } onChange={ this.handleChange }/>
@@ -79,5 +77,6 @@ export class Form extends Component {
     )
   }
 }
+
 
 export default connect(null, { addPlant })(Form)
