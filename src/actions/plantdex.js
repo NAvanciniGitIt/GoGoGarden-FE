@@ -20,7 +20,7 @@ export const addPlant = (plant, history) => {
       .then(resp => resp.json())
       .then(plant => {
         dispatch({ type: "ADD_PLANT", plant })
-        history.push("/plantdex")
+        history.push("/plants")
       })
   }
 }
