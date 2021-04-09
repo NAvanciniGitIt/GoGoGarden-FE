@@ -1,0 +1,24 @@
+body {
+  background-image: url("./images/gardenbackground.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: auto; 
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.nav, .nav-wrapper {
+  background-color: rgb(104, 202, 112);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3 {
+  text-align: center;
+
+}
+
