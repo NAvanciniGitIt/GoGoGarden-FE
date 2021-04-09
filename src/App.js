@@ -9,6 +9,9 @@ import ErrorPage from './containers/Error';
 import Plantdex from './components/Plantdex';
 import About from './containers/About';
 import Form from './components/Plantform';
+import 'materialize-css';
+import './App.css';
+//import { Button, Card, Row, Col } from 'react-materialize';
 
 
 class App extends Component {
