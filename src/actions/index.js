@@ -47,7 +47,7 @@ export const addComment = (comment, history) => {
       method: "POST",
       headers: {
         "Accept": "application/json",
-        "Conent-Type": "application/json"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({ comment })
     })
