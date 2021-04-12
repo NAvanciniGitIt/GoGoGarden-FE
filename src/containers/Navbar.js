@@ -5,9 +5,9 @@ export class Navbar extends Component {
   render() {
     return (
      <nav> 
-      <div class="nav-wrapper">
-      <Link to="/" class="brand-logo center">GoGoGarden</Link>
-        <ul id="nav" class="right">
+      <div className="nav-wrapper">
+      <Link to="/" className="brand-logo center">GoGoGarden</Link>
+        <ul id="nav" className="right">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/plantdex">Plantdex</Link></li>
