@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addPlant } from '../actions/plantdex';
+import { addPlant } from '../actions/index';
 
 
 export class Form extends Component {
+  
   state = {
     plant_type: "",
     seed_type: "",
