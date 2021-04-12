@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getPlants } from './actions/plantdex';
+import { getPlants } from './actions/index';
 import Navbar from './containers/Navbar';
 import Footer from './containers/Footer';
 import Planter from './containers/Planter';
 import ErrorPage from './containers/Error';
 import Plantdex from './components/Plantdex';
+import Plants from './containers/Plants';
 import About from './containers/About';
 import Form from './components/Plantform';
 import 'materialize-css';
@@ -34,6 +35,7 @@ class App extends Component {
          <Route exact path="/about" component={ About } />
          <Route exact path="/plantdex" component={ Plantdex } />
          <Route exact path="/plantdex/new" component={ Form } />
+         <Route path="/:id" component={Plants} />
          <Route component={ErrorPage} />
         </Switch>
        <Footer/>
