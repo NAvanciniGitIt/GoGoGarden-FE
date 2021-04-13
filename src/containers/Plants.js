@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { getPlant } from '../actions'
 import Form from '../components/Commentform'
+import { getComments } from "../actions"
+
 
 export class Plants extends Component {
   render() {
-
   
     const { plant_type, seed_type, seed_date, light, environment, soil, notes, problems, id, comments } = this.props.plant;
 
@@ -28,8 +29,8 @@ export class Plants extends Component {
         <div className="plant float-container">
         <br />
         <div className="float-child">
-          <h3>{ plant_type } </h3>
-          <h2>{ seed_type }</h2>
+          <h3>Plant Category: { plant_type } </h3>
+          <h2>Seed Type: { seed_type }</h2>
           <p>{ seed_date }</p>
           <p>{ light }</p>
           <p>{ environment }</p>
@@ -56,4 +57,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { getPlant })(Plants)
+export default connect(mapStateToProps, { getPlant, getComments })(Plants)

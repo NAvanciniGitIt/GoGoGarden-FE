@@ -14,6 +14,9 @@ export class Plantdex extends Component {
     const plantsList = plants.length ? (
       plants.map(plant => {
         return (
+        <div className="row">
+          <div className="col s10 m6">
+
           <div className="plants" key={plant.id}>
             <div className="card" >
               <div className="card-content">
@@ -23,6 +26,8 @@ export class Plantdex extends Component {
               </div>
             </div>
           </div>
+         </div>
+        </div> 
         )
       })
     ) : (

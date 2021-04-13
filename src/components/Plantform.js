@@ -31,12 +31,14 @@ export class Form extends Component {
   render() {
 
     return (
-      <div>
-        <h3> Add Plant To Your Garden </h3>
+      <div className="container">
+        <div className="formstyle">
+          <h3> Add Plant To Your Garden </h3>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="plant_type">Plant Category: </label>
+            <p><label htmlFor="plant_type">Plant Category: </label>
             <input type="text" id="plant_type" name="plant_type" value={ this.state.plant_type } onChange={ this.handleChange }/>
+            </p>
           </div>
           <br></br>
           <div>
@@ -74,6 +76,7 @@ export class Form extends Component {
           <br></br>
           <input type="submit" value="Add Plant"/>
         </form>
+        </div>
       </div>
     )
   }
