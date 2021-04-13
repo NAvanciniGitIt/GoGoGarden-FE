@@ -59,3 +59,12 @@ export const addComment = (comment, history) => {
   }
 }
 
+export const getComments = () => {
+  return dispatch => {
+    dispatch({type: "LOADING"})
+
+    fetch(COMMENT_URL)
+    .then(resp => resp.json())
+    .then(comment => dispatch({type: "SET_COMMENTS", comment}))
+  }
+}

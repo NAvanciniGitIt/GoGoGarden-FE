@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getPlants } from './actions/index';
-import Navbar from './containers/Navbar';
-import Footer from './containers/Footer';
+import { getPlants, getComments } from './actions/index';
 import Planter from './containers/Planter';
+import Navbar from './containers/Navbar';
+import About from './containers/About';
 import ErrorPage from './containers/Error';
 import Plantdex from './components/Plantdex';
 import Plants from './containers/Plants';
-import About from './containers/About';
 import Form from './components/Plantform';
+import Footer from './containers/Footer';
 import 'materialize-css';
 import './App.css';
 //import { Button, Card, Row, Col } from 'react-materialize';
@@ -19,6 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.getPlants();
+    this.props.getComments();
   }
 
   render() {
@@ -50,4 +51,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { getPlants })(App);
+export default connect(mapStateToProps, { getPlants, getComments })(App);
