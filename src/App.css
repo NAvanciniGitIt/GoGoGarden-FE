@@ -1,5 +1,5 @@
 body {
-  background-image: url("./images/gardenbackground.gif");
+  background-image: url("./images/green.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: auto;
@@ -9,8 +9,20 @@ body {
   flex-direction: column;
 }
 
-.nav, .nav-wrapper {
-  background-color: rgb(104, 202, 112);
+.nav, .nav-wrapper, .brand-logo-center {
+  background-color: rgb(146, 235, 104);
+  display: flex;
+ 
+}
+
+.page-footer {
+  background-image: none;
+  background-color: rgb(146, 235, 104);
+  display: flex
+  
+}
+.app {
+  text-align: center;
 }
 
 main {
@@ -19,6 +31,47 @@ main {
 
 h1, h2, h3 {
   text-align: center;
+  color: black;
 
 }
 
+.card {
+  background-color: rgb(123, 208, 247);
+  text-align: left;
+  background-image: url("./images/icon.png");
+  background-position: right;
+  background-size: 100px;
+  height: 100px;
+  width: 300px;
+  background-repeat: no-repeat;
+ 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  column-count: 2;
+  column-fill: balance;
+}
+
+.card-title {
+  color: black
+}
+
+.comment {
+  height: 50;
+  width: 100;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.formstyle {
+  color: black;
+  
+}
+
+.float-container {
+  
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+
+}  
