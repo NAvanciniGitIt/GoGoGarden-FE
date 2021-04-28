@@ -1,3 +1,13 @@
+# Setting Up Back-End
+Please clone the BE from this repo: https://github.com/NAvanciniGitIt/GoGoGarden-BE
+and then run these commands in the terminal:
+$ rails db:create, $ rails db:migrate, $ rails db:seed
+To start the server type into terminal: 
+$ rails s
+
+# About GoGoGarden
+An informational database for all of your gardening needs, giving users the ability to add their own plants and comment useful info.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

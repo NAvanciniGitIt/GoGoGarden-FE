@@ -22,6 +22,7 @@ class App extends Component {
     this.props.getComments();
   }
 
+
   render() {
     if (this.props.loading) {
       return (
