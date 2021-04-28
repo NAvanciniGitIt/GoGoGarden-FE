@@ -37,6 +37,7 @@ export const addPlant = (plant, history) => {
       .then(plant => {
         dispatch({ type: "ADD_PLANT", plant })
         history.push("/plantdex")
+        // debugger
       })
   }
 }
@@ -65,6 +66,6 @@ export const getComments = () => {
 
     fetch(COMMENT_URL)
     .then(resp => resp.json())
-    .then(comment => dispatch({type: "SET_COMMENTS", comment}))
+    .then(comments => dispatch({type: "SET_COMMENTS", comments}))
   }
 }
