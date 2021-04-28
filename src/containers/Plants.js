@@ -6,11 +6,16 @@ import { getComments } from "../actions"
 
 
 export class Plants extends Component {
+
+  componentDidMount(){ 
+    return this.props.comments
+    }
+
   render() {
   
-    const { plant_type, seed_type, seed_date, light, environment, soil, notes, problems, id, comments } = this.props.plant;
+    const { plant_cat, seed_type, light_type, environment, soil, fertilizer, harvest, problems, id, comments } = this.props.plant;
 
-    const commentListing = comments.length ? (
+    const commentListing = comments !== undefined && comments.length ? (
       comments.map(comment => {
         return (
           <div className="comment container" key={comment.id}>
@@ -29,14 +34,14 @@ export class Plants extends Component {
         <div className="plant float-container">
         <br />
         <div className="float-child">
-          <h3>Plant Category: { plant_type } </h3>
+          <h3>Plant Category: { plant_cat } </h3>
           <h2>Seed Type: { seed_type }</h2>
-          <p>{ seed_date }</p>
-          <p>{ light }</p>
-          <p>{ environment }</p>
-          <p>{ soil }</p>
-          <p>{ notes }</p>
-          <p>{ problems }</p>  
+          <p>Suggested Hours of Light: { light_type }</p>
+          <p>Recommended Environment: { environment }</p>
+          <p>Recommended Soil: { soil }</p>
+          <p>Recommended Fertilizer: { fertilizer }</p>
+          <p>Recommended Harvest Time:{ harvest }</p>
+          <p>Known Issues: { problems }</p>  
           </div>
           <Form history= { this.props.history } plant_id={id}/>
           <h4 className="center"> Comments</h4>
@@ -53,7 +58,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     loading: state.loading,
     plant: state.plants.find(plant => plant.id === id),
-    comments: state.comments 
+    comments: state.plants.comments 
   }
 }
 

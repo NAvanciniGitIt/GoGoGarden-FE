@@ -16,7 +16,7 @@ const plantsReducer = (state=initialState, action) => {
       return {
         ...state,
         loading: false,
-        plant: action.plants
+        plant: action.plant
       }
 
     case "SET_PLANTS":
@@ -28,14 +28,22 @@ const plantsReducer = (state=initialState, action) => {
 
       case "ADD_PLANT":
         return {
-          ...state, 
-          plant: [...state.plants, action.plants]
+          ...state,
+          plants: [...state.plants, action.plant]
         }
 
       case "ADD_COMMENT":
         return{
+          loading: false,
           ...state,
-          comments: [...state.comments, action.comment]
+          comments: [...state.comments, action.comment],
+          plants: [...state.plants, action.comment]
+        }
+      case "SET_COMMENTS":
+        return {
+          ...state,
+          loading: true,
+          comments: action.comments
         }
 
     default:

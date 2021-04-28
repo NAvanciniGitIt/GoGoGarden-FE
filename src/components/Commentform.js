@@ -32,7 +32,7 @@ export class Commentform extends Component {
     return (
       <div>
         <form onSubmit={ this.handleSubmit }> 
-         <h4 className="center"><label htmlFor="comment">Comment</label></h4>
+         <h4 className="container center"><label htmlFor="comment">Comment</label></h4>
          <input className="commentBox" type="text" name="content" value={this.state.content} onChange={ this.handleChange }/>
          <div className="container center">
             <button>Submit</button>

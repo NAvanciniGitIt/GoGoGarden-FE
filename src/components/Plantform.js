@@ -6,13 +6,13 @@ import { addPlant } from '../actions/index';
 export class Form extends Component {
   
   state = {
-    plant_type: "",
+    plant_cat: "",
     seed_type: "",
-    seed_date: "",
-    light: "",
+    light_type: "",
     environment: "",
     soil: "",
-    notes: "",
+    fertilizer: "",
+    harvest: "",
     problems: "",
   }
 
@@ -33,11 +33,11 @@ export class Form extends Component {
     return (
       <div className="container">
         <div className="formstyle">
-          <h3> Add Plant To Your Garden </h3>
+          <h3> Add Plant To The Garden </h3>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <p><label htmlFor="plant_type">Plant Category: </label>
-            <input type="text" id="plant_type" name="plant_type" value={ this.state.plant_type } onChange={ this.handleChange }/>
+            <p><label htmlFor="plant_cat">Plant Category: </label>
+            <input type="text" id="plant_cat" name="plant_cat" value={ this.state.plant_cat } onChange={ this.handleChange }/>
             </p>
           </div>
           <br></br>
@@ -47,30 +47,32 @@ export class Form extends Component {
           </div>
           <br></br>
           <div>
-            <label htmlFor="seed_date">Planted Date: </label>
-            <input type="date" id="seed_date" name="seed_date" value={ this.state.seed_date} onChange={ this.handleChange }/>
+            <label htmlFor="light_type">Recommended Hours of Light: </label>
+            <input type="text" id="light_type" name="light_type" value={ this.state.light_type } onChange={ this.handleChange }/>
           </div>
           <br></br>
           <div>
-            <label htmlFor="light">Light: </label>
-            <input type="text" id="light" name="light" value={ this.state.light } onChange={ this.handleChange }/>
-          </div>
-          <br></br>
-          <div>
-            <label htmlFor="evironment">Environment: </label>
+            <label htmlFor="evironment">Recommended Environment: </label>
             <input type="text" id="environment" name="environment" value={ this.state.environment } onChange={ this.handleChange }/>
           </div>
           <br></br>
           <div>
-            <label htmlFor="soil">Soil: </label>
+            <label htmlFor="soil">Recommended Soil: </label>
             <input type="text" id="soil" name="soil" value={ this.state.soil } onChange={ this.handleChange }/>
           </div>
+          <br></br>
           <div>
-            <p><label htmlFor="notes">Notes: </label></p>
-            <textarea id="notes" name="notes" value={ this.state.notes } onChange={ this.handleChange }></textarea>
-          </div> 
+            <label htmlFor="fertilizer">Recommended Fertilizer: </label>
+            <input type="text" id="fertilizer" name="fertilizer" value={ this.state.fertilizer } onChange={ this.handleChange }/>
+          </div>
+          <br></br>
           <div>
-            <p><label htmlFor="problems">Problems: </label></p>
+            <label htmlFor="harvest">Recommended Harvest Time: </label>
+            <input type="text" id="harvest" name="harvest" value={ this.state.harvest } onChange={ this.handleChange }/>
+          </div>
+          
+          <div>
+            <p><label htmlFor="problems">Known Issues:</label></p>
             <textarea id="problems" name="problems" value={ this.state.problems } onChange={ this.handleChange }></textarea>
           </div>
           <br></br>
