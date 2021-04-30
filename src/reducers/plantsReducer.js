@@ -33,11 +33,15 @@ const plantsReducer = (state=initialState, action) => {
         }
 
       case "ADD_COMMENT":
+        let plants = [...state.plants]
+        let plant = plants.find(plant => plant.id === action.comment.plant_id)
+        plant.comments.push(action.comment) 
+        // debugger
         return{
           loading: false,
           ...state,
           comments: [...state.comments, action.comment],
-          plants: [...state.plants, action.comment]
+          plants: plants 
         }
       case "SET_COMMENTS":
         return {

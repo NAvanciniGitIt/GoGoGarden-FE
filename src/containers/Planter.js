@@ -7,6 +7,7 @@ export class Planter extends Component {
       <div className="App">
         <div className="container">
         <h1> Welcome!</h1>
+        
         </div>
       </div>
     )

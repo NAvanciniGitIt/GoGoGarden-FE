@@ -19,6 +19,7 @@ export class Commentform extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+
     this.props.addComment(this.state, this.props.history)
     this.setState({
       content: "",
